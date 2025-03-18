@@ -28,7 +28,7 @@ if __name__ == '__main__':
 import unittest
 import SW_Testing_assignment_2 as main
 class TestBMIProgram(unittest.TestCase):
-    def BMI_classification(self):
+    def test_BMI_classification(self):
         self.assertEqual(main.classify(18.4), "Underweight")
         self.assertEqual(main.classify(18.5), "Normal weight")
         self.assertEqual(main.classify(24.9), "Normal weight")
