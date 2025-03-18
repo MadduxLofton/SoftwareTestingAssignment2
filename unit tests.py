@@ -26,10 +26,16 @@ if __name__ == '__main__':
 """
 
 import unittest
-import SW_Testing_assignment_2 as main_file
-class TestNumEqual(unittest.TestCase):
-    def test_1(self):
-        self.assertEqual(main_file.return_1(), 1)
+import SW_Testing_assignment_2 as main
+class TestBMIProgram(unittest.TestCase):
+    def BMI_classification(self):
+        self.assertEqual(main.classify(18.4), "Underweight")
+        self.assertEqual(main.classify(18.5), "Normal weight")
+        self.assertEqual(main.classify(24.9), "Normal weight")
+        self.assertEqual(main.classify(25), "Overweight")
+        self.assertEqual(main.classify(29.9), "Overweight")
+        self.assertEqual(main.classify(30), "Obese")
+        
 
 if __name__ == '__main__':
     unittest.main()
