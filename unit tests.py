@@ -35,7 +35,15 @@ class TestBMIProgram(unittest.TestCase):
         self.assertEqual(main.classify(25), "Overweight")
         self.assertEqual(main.classify(29.9), "Overweight")
         self.assertEqual(main.classify(30), "Obese")
-        
+    
+    def test_input_validation(self):
+        self.assertEqual(main.check_num(1), True)
+        self.assertEqual(main.check_num(1.1), True)
+        self.assertEqual(main.check_num(1.01), False) # 0.1 is the smallest allowable change
+        self.assertEqual(main.check_num("apple"), False)
+        self.assertEqual(main.check_num("1"), True)
+        self.assertEqual(main.check_num("1.1"), True)
+        self.assertEqual(main.check_num("1.02"), False)
 
 if __name__ == '__main__':
     unittest.main()

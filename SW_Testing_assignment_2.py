@@ -7,3 +7,9 @@ def classify(bmi):
         return "Overweight"
     else:
         return "Obese"
+    
+def find_BMI(height, weight):
+    return 0
+
+def check_num(num_val):
+    return 0
