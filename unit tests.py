@@ -43,6 +43,7 @@ class TestBMIProgram(unittest.TestCase):
         self.assertEqual(main.check_num("1.1"), True)
         self.assertEqual(main.check_num("1.01"), False) # Smallest change allowed is 0.1
         self.assertEqual(main.check_num("1.09"), False) # Smallest change allowed is 0.1
+        self.assertEqual(main.check_num("-1"), False)
 
     def test_BMI_calculation(self):
         # find_BMI(height in inches, weight in pounds)
